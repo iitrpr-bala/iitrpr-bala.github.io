@@ -34,10 +34,21 @@
     <!-- 1. STICKY HEADER -->
     <header class="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800 transition-all">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Branding using external logo -->
+            <!-- Branding using exact SVG representation of your V3 Infratech logo -->
             <a href="#home" class="flex items-center gap-3 group">
-                <div class="h-10 bg-white border border-slate-700 rounded flex items-center justify-center px-2 py-1 shadow-md">
-                    <img src="https://site-cdn.core.nytro.ai/static/media/b3a85a81-8b2a-4170-b3ef-220d2340fcad.jpeg?_cb=1760640676.0137115" alt="V3 Infratech Logo" class="h-full w-auto object-contain">
+                <div class="h-12 w-auto bg-white border border-slate-700 rounded flex items-center justify-center p-1.5 shadow-md">
+                    <svg viewBox="0 0 350 140" class="h-full w-auto" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Top slashes -->
+                        <rect x="180" y="8" width="12" height="30" transform="rotate(25 186 23)" fill="#000000" />
+                        <rect x="200" y="16" width="12" height="30" transform="rotate(25 206 31)" fill="#000000" />
+                        
+                        <!-- V mark (Left blue stroke, center black stroke) -->
+                        <path d="M 60 40 L 110 115 L 135 115 L 85 40 Z" fill="#0b5ed7" />
+                        <path d="M 135 115 L 110 115 L 175 40 L 195 40 Z" fill="#000000" />
+                        
+                        <!-- 3 mark (Blue) -->
+                        <path d="M 170 42 H 240 L 205 70 C 225 70 245 80 245 100 C 245 120 220 130 190 128 C 170 126 155 118 145 108 L 165 92 C 172 98 182 104 195 104 C 210 104 218 96 218 88 C 218 80 208 74 190 74 H 175 L 195 42 Z" fill="#0b5ed7" />
+                    </svg>
                 </div>
                 <div class="flex flex-col">
                     <span class="font-extrabold text-lg tracking-tight text-white group-hover:text-blue-500 transition-colors">
