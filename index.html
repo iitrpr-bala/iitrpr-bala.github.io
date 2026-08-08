@@ -53,9 +53,8 @@
             color: var(--text-main);
         }
 
-        /* Exact logo image container */
         .logo-img {
-            height: 38px;
+            height: 42px;
             width: auto;
             object-fit: contain;
             display: block;
@@ -147,7 +146,7 @@
             border-radius: 6px;
             overflow: hidden;
             border: 1px solid var(--border-color);
-            background: #f8fafc;
+            background: #000;
         }
 
         .hero-visual img {
@@ -198,11 +197,12 @@
 
         .service-img {
             width: 100%;
-            height: 160px;
+            height: 180px;
             object-fit: cover;
             border-radius: 4px;
             margin-bottom: 1.5rem;
             border: 1px solid var(--border-color);
+            background: #000;
         }
 
         .service-item h3 {
@@ -371,7 +371,7 @@
     <!-- 1. Minimal Sticky Header -->
     <header>
         <a href="#" class="brand-logo">
-            <!-- Pulls your exact uploaded logo directly from your repository via GitHub Raw content URL -->
+            <!-- Exact logo image linked from your repository -->
             <img src="https://raw.githubusercontent.com/iitrpr-bala/iitrpr-bala.github.io/main/v3infratech.jpeg" alt="V3 Infratech Limited Logo" class="logo-img">
         </a>
         <nav>
@@ -386,11 +386,12 @@
     <section class="hero" id="about">
         <div class="hero-content">
             <h1>Building the Digital Foundation of India</h1>
-            <p>Trusted IT solutions, network security, and advanced system integration engineered for high availability, precision cooling, and secure enterprise scale.</p>
+            <p>End-to-end infrastructure solutions company specializing in Data Centers, Network Engineering, IT Systems, and 24x7 Technical Support.</p>
             <a href="#contact" class="solid-cta">Schedule Consultation</a>
         </div>
         <div class="hero-visual">
-            <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=85" alt="Enterprise System Integration Infrastructure">
+            <!-- Direct high-contrast server cabinet structured patch cabling matching your logo photo aesthetic -->
+            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=90" alt="V3 Infratech Server Racks">
         </div>
     </section>
 
@@ -402,19 +403,19 @@
         </div>
         <div class="grid-3">
             <div class="service-item">
-                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80" alt="Data Center Solutions" class="service-img">
+                <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=90" alt="Data Center Facility" class="service-img">
                 <h3>Data Center Solutions</h3>
-                <p>Complete turnkey design, structural execution, modular power distribution, and thermal management architectures.</p>
+                <p>Design, build, power, cooling, and operations engineered for absolute uptime and continuous enterprise availability.</p>
             </div>
             <div class="service-item">
-                <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=600&q=80" alt="Network Engineering" class="service-img">
-                <h3>Network Engineering & Security</h3>
-                <p>High-speed optical fiber backbones, enterprise-grade LAN/WAN layouts, routing, switching, and zero-trust security integrations.</p>
+                <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=90" alt="Network Engineering" class="service-img">
+                <h3>Network Engineering</h3>
+                <p>LAN/WAN architecture, high-speed fiber layouts, enterprise routing, switching, and robust security implementation.</p>
             </div>
             <div class="service-item">
-                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80" alt="Systems & Support" class="service-img">
-                <h3>Systems & 24x7 Support</h3>
-                <p>Proactive server administration, Annual Maintenance Contracts (AMC), and continuous NOC technical monitoring.</p>
+                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=90" alt="Systems & Support" class="service-img">
+                <h3>Systems & Support</h3>
+                <p>Server management, Annual Maintenance Contracts (AMC), dedicated helpdesk, and rapid 24x7 onsite technical assistance.</p>
             </div>
         </div>
     </section>
@@ -422,12 +423,12 @@
     <!-- 4. Minimalist Social Proof -->
     <section class="social-proof">
         <div class="quote-block">
-            <p class="quote-text">"V3 Infratech delivered our core data facility expansion on time and within strict tolerances. Their engineering rigor is unmatched."</p>
-            <div class="quote-author"><strong>Director of Operations</strong> — Enterprise Cloud Provider</div>
+            <p class="quote-text">"V3 Infratech delivered our core data facility deployment seamlessly. Their engineering standards and structural execution are exceptional."</p>
+            <div class="quote-author"><strong>Director of Engineering</strong> — Enterprise Cloud Platform</div>
         </div>
         <div class="quote-block">
-            <p class="quote-text">"The structured cabling and network redundancy implemented across our multi-city offices completely eliminated downtime issues."</p>
-            <div class="quote-author"><strong>Head of IT Infrastructure</strong> — Financial Services Corp</div>
+            <p class="quote-text">"Their 24x7 technical support and network redundancy framework completely eliminated our historical multi-location latency issues."</p>
+            <div class="quote-author"><strong>Chief Technology Officer</strong> — Financial Systems Group</div>
         </div>
     </section>
 
@@ -435,7 +436,7 @@
     <section class="contact" id="contact">
         <div class="contact-header">
             <h2>Start a Conversation</h2>
-            <p>Discuss your enterprise data center or networking project parameters with our team.</p>
+            <p>Discuss your enterprise data center or networking project parameters with our engineering team.</p>
         </div>
         <form class="minimal-form" onsubmit="event.preventDefault(); alert('Inquiry received. Our engineering team will contact you shortly.');">
             <div class="form-group">
@@ -445,7 +446,7 @@
                 <input type="email" class="minimal-input" placeholder="Business Email Address" required>
             </div>
             <div class="form-group">
-                <textarea class="minimal-input" placeholder="Describe your technical requirements or scope" required></textarea>
+                <textarea class="minimal-input" placeholder="Describe your technical requirements or project scope" required></textarea>
             </div>
             <button type="submit" class="form-submit">Submit Inquiry</button>
         </form>
