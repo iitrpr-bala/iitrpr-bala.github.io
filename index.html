@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V3 Infratech Limited | Building the Digital Foundation of India</title>
+    <style>
+        :root {
+            --bg-dark: #0a0e17;
+            --bg-card: #111827;
+            --brand-blue-primary: #0038a8;
+            --brand-blue-bright: #0052ff;
+            --accent-cyan: #00d2ff;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border-color: #1f2937;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Header & Navigation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            background-color: rgba(10, 14, 23, 0.95);
+            backdrop-filter: blur(8px);
+            z-index: 100;
+        }
+
+        .brand-logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-svg {
+            height: 45px;
+            width: auto;
+        }
+
+        .brand-text-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: -0.2px;
+            line-height: 1.1;
+        }
+
+        .brand-tagline {
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.2s;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: var(--accent-cyan);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 5rem 5% 3rem;
+            text-align: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff 30%, var(--brand-blue-bright) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .hero-image-container {
+            margin: 2.5rem auto;
+            max-width: 950px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+        }
+
+        .hero-image-container img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--brand-blue-primary), var(--brand-blue-bright));
+            color: #fff;
+            padding: 0.85rem 2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 14px rgba(0, 82, 255, 0.3);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 82, 255, 0.5);
+        }
+
+        /* Services Grid Section */
+        .services {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.2s, border-color 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--brand-blue-bright);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .card-body {
+            padding: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--accent-cyan);
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Promise Banner */
+        .promise-banner {
+            background: linear-gradient(135deg, rgba(0, 56, 168, 0.25), rgba(0, 210, 255, 0.05));
+            border: 1px solid var(--border-color);
+            padding: 3rem 5%;
+            text-align: center;
+            margin: 2rem auto 5rem;
+            max-width: 1200px;
+            border-radius: 10px;
+        }
+
+        .promise-banner h2 {
+            font-size: 1.8rem;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        .promise-banner p {
+            color: var(--accent-cyan);
+            font-size: 1.15rem;
+            font-weight: 500;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 5%;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+            background-color: var(--bg-card);
+        }
+
+        .contact form {
+            max-width: 500px;
+            margin: 2rem auto 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact input, .contact textarea {
+            padding: 0.85rem;
+            background-color: var(--bg-dark);
+            border: 1px solid var(--border-color);
+            color: #fff;
+            border-radius: 6px;
+            font-size: 0.95rem;
+        }
+
+        .contact input:focus, .contact textarea:focus {
+            outline: none;
+            border-color: var(--brand-blue-bright);
+        }
+
+        .contact button {
+            background: linear-gradient(135deg, var(--brand-blue-primary), var(--brand-blue-bright));
+            color: #fff;
+            border: none;
+            padding: 0.85rem;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: opacity 0.2s;
+        }
+
+        .contact button:hover {
+            opacity: 0.95;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            nav { display: none; }
+            .hero-image-container img { height: 260px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="brand-logo-container">
+            <!-- Precise Vector SVG Logo based on official brand mark -->
+            <svg class="logo-svg" viewBox="0 0 240 180" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 15,35 L 75,160 L 105,160 L 140,80 L 115,80 L 90,135 L 40,35 Z" fill="#0038a8" />
+                <path d="M 88,102 L 105,160 L 140,80 L 115,80 L 98,122 Z" fill="#061230" />
+                <path d="M 140,40 C 175,32 215,48 215,75 C 215,92 198,102 182,105 C 205,108 220,125 220,148 C 220,180 170,190 135,178 L 142,156 C 168,165 200,158 200,142 C 200,126 172,122 150,122 L 150,103 C 170,103 195,98 195,80 C 195,67 170,58 145,64 Z" fill="#0052ff" />
+                <polygon points="128,12 145,12 118,50 101,50" fill="#001845" />
+                <polygon points="148,22 161,22 139,50 126,50" fill="#001845" />
+            </svg>
+            <div class="brand-text-group">
+                <span class="brand-name">V3 Infratech</span>
+                <span class="brand-tagline">Limited</span>
+            </div>
+        </a>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="about">
+        <h1>Building the Digital Foundation of India</h1>
+        <p>V3 Infratech Limited is an end-to-end infrastructure solutions company specializing in Data Centers, Network Engineering, IT Systems, and 24x7 Technical Support. Designing, building, and managing core infrastructure for enterprises, cloud providers, and government organizations across India with an uncompromised focus on reliability, scalability, and security.</p>
+        
+        <div class="hero-image-container">
+            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80" alt="V3 Infratech Data Center Infrastructure">
+        </div>
+
+        <a href="#contact" class="cta-btn">Consult Our Infrastructure Experts</a>
+    </section>
+
+    <section class="services" id="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80" alt="Data Center Setup" class="card-img">
+                <div class="card-body">
+                    <h3>Data Center Solutions</h3>
+                    <p>Complete design, build, power infrastructure, precision thermal cooling, and full-spectrum operations management engineered for enterprise availability.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1551703599-6b3e8379aa8b?auto=format&fit=crop&w=600&q=80" alt="Network Engineering" class="card-img">
+                <div class="card-body">
+                    <h3>Network Engineering</h3>
+                    <p>End-to-end LAN/WAN architecture, high-speed optical fiber deployment, enterprise routing, switching, and advanced network security.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80" alt="IT Infrastructure" class="card-img">
+                <div class="card-body">
+                    <h3>Infrastructure Setup</h3>
+                    <p>Physical hardware deployments including server racks, structured cabling, UPS power protection systems, diesel generators, and DC infra.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="Systems and Support" class="card-img">
+                <div class="card-body">
+                    <h3>Systems & Support</h3>
+                    <p>Full server management, Annual Maintenance Contracts (AMC), 24x7 specialized helpdesk, and rapid response onsite technical support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="promise-banner">
+        <h2>Our Promise</h2>
+        <p>Engineered for Uptime. Backed by Support.</p>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Get in Touch</h2>
+        <p style="color: var(--text-muted);">Discuss your data center, networking, or infrastructure requirements with our team.</p>
+        <form onsubmit="event.preventDefault(); alert('Thank you. Your request has been submitted to V3 Infratech.');">
+            <input type="text" placeholder="Your Full Name" required>
+            <input type="email" placeholder="Business Email Address" required>
+            <textarea rows="4" placeholder="Describe your infrastructure needs..." required></textarea>
+            <button type="submit">Submit Request</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 V3 Infratech Limited. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
