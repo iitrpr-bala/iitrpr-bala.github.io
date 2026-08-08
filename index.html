@@ -1,467 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="V3 Infratech Limited — enterprise IT infrastructure, data center, networking and managed support services.">
-  <title>V3 Infratech Limited | Building the Digital Foundation of India</title>
-  <meta property="og:title" content="V3 Infratech Limited | Building the Digital Foundation of India" />
-  <meta property="og:description" content="End-to-end infrastructure solutions: Data Centers, Network Engineering, Physical Infrastructure and 24x7 Support across India." />
-  <meta property="og:image" content="assets/v3infratech.svg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <style>
-    :root {
-      --bg-dark: #0a0e17;
-      --bg-card: #111827;
-      --brand-blue-primary: #0038a8;
-      --brand-blue-bright: #0052ff;
-      --accent-cyan: #00d2ff;
-      --text-main: #f3f4f6;
-      --text-muted: #9ca3af;
-      --border-color: #1f2937;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    }
-
-    body {
-      background-color: var(--bg-dark);
-      color: var(--text-main);
-      line-height: 1.6;
-    }
-
-    /* Header & Navigation */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 5%;
-      border-bottom: 1px solid var(--border-color);
-      position: sticky;
-      top: 0;
-      background-color: rgba(10, 14, 23, 0.95);
-      backdrop-filter: blur(8px);
-      z-index: 100;
-    }
-
-    .brand-logo-container {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-    }
-
-    .logo-svg {
-      height: 45px;
-      width: auto;
-    }
-
-    .brand-text-group {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .brand-name {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: #ffffff;
-      letter-spacing: -0.2px;
-      line-height: 1.1;
-    }
-
-    .brand-tagline {
-      font-size: 0.65rem;
-      color: var(--text-muted);
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-
-    nav a {
-      color: var(--text-muted);
-      text-decoration: none;
-      margin-left: 2rem;
-      transition: color 0.2s;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      color: var(--accent-cyan);
-    }
-
-    /* Hero Section */
-    .hero {
-      padding: 5rem 5% 3rem;
-      text-align: center;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      line-height: 1.2;
-      margin-bottom: 1.5rem;
-      background: linear-gradient(135deg, #ffffff 30%, var(--brand-blue-bright) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      color: var(--text-muted);
-      margin-bottom: 2rem;
-    }
-
-    .hero-image-container {
-      margin: 2.5rem auto;
-      max-width: 950px;
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid var(--border-color);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-    }
-
-    .hero-image-container img {
-      width: 100%;
-      height: 420px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .cta-btn {
-      display: inline-block;
-      background: linear-gradient(135deg, var(--brand-blue-primary), var(--brand-blue-bright));
-      color: #fff;
-      padding: 0.85rem 2rem;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 4px 14px rgba(0, 82, 255, 0.3);
-    }
-
-    .cta-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 82, 255, 0.5);
-    }
-
-    /* Services Grid Section */
-    .services {
-      padding: 5rem 5%;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 3rem;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
-    }
-
-    .card {
-      background-color: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 10px;
-      overflow: hidden;
-      transition: transform 0.2s, border-color 0.2s;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      border-color: var(--brand-blue-bright);
-    }
-
-    .card-img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .card-body {
-      padding: 1.5rem;
-      flex-grow: 1;
-    }
-
-    .card h3 {
-      font-size: 1.25rem;
-      margin-bottom: 0.75rem;
-      color: var(--accent-cyan);
-    }
-
-    .card p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-    }
-
-    /* Promise Banner */
-    .promise-banner {
-      background: linear-gradient(135deg, rgba(0, 56, 168, 0.25), rgba(0, 210, 255, 0.05));
-      border: 1px solid var(--border-color);
-      padding: 3rem 5%;
-      text-align: center;
-      margin: 2rem auto 5rem;
-      max-width: 1200px;
-      border-radius: 10px;
-    }
-
-    .promise-banner h2 {
-      font-size: 1.8rem;
-      color: #fff;
-      margin-bottom: 0.5rem;
-    }
-
-    .promise-banner p {
-      color: var(--accent-cyan);
-      font-size: 1.15rem;
-      font-weight: 500;
-    }
-
-    /* Contact Section */
-    .contact {
-      padding: 5rem 5%;
-      text-align: center;
-      border-top: 1px solid var(--border-color);
-      background-color: var(--bg-card);
-    }
-
-    .contact form {
-      max-width: 500px;
-      margin: 2rem auto 0;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .contact input, .contact textarea {
-      padding: 0.85rem;
-      background-color: var(--bg-dark);
-      border: 1px solid var(--border-color);
-      color: #fff;
-      border-radius: 6px;
-      font-size: 0.95rem;
-    }
-
-    .contact input:focus, .contact textarea:focus {
-      outline: none;
-      border-color: var(--brand-blue-bright);
-    }
-
-    .contact button {
-      background: linear-gradient(135deg, var(--brand-blue-primary), var(--brand-blue-bright));
-      color: #fff;
-      border: none;
-      padding: 0.85rem;
-      border-radius: 6px;
-      font-weight: 600;
-      cursor: pointer;
-      font-size: 1rem;
-      transition: opacity 0.2s;
-    }
-
-    .contact button:hover {
-      opacity: 0.95;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      color: var(--text-muted);
-      font-size: 0.85rem;
-      border-top: 1px solid var(--border-color);
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 2rem; }
-      nav { display: none; }
-      .hero-image-container img { height: 260px; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V3 Infratech Limited | Building the Digital Foundation of India</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-feature-settings: "liga" 1, "kern" 1; }
+        .font-heading { font-family: 'Space Grotesk', 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+    </style>
 </head>
-<body>
+<body class="bg-slate-900 text-slate-100 antialiased selection:bg-blue-600 selection:text-white">
 
-  <header>
-    <a href="#" class="brand-logo-container">
-      <!-- Use local supplied SVG logo file -->
-      <img src="assets/v3infratech.svg" class="logo-svg" alt="V3 Infratech logo">
-      <div class="brand-text-group">
-        <span class="brand-name">V3 Infratech</span>
-        <span class="brand-tagline">Limited</span>
-      </div>
-    </a>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <section class="hero" id="about">
-    <h1>Building the Digital Foundation of India</h1>
-    <p>V3 Infratech Limited is an end-to-end infrastructure solutions company specializing in Data Centers, Network Engineering, IT Systems, and 24x7 Technical Support. Designing, building, and managing core infrastructure for enterprises, cloud providers, and government organizations across India with an uncompromised focus on reliability, scalability, and security.</p>
-        
-    <div class="hero-image-container">
-      <img src="assets/images/future_ready_img1.webp" alt="V3 Infratech Data Center Infrastructure">
-    </div>
-
-    <a href="#contact" class="cta-btn">Consult Our Infrastructure Experts</a>
-  </section>
-
-  <section class="services" id="services">
-    <h2 class="section-title">Our Services</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="assets/images/structured-cabling-it-networking-service.jpg" alt="Data Center Setup" class="card-img">
-        <div class="card-body">
-          <h3>Data Center Solutions</h3>
-          <p>Complete design, build, power infrastructure, precision thermal cooling, and full-spectrum operations management engineered for enterprise availability.</p>
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-[#e9e6e4] border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-4 text-slate-900">
+                <img src="assets/v3infratech.svg" alt="V3 Infratech logo" class="h-20 w-auto" />
+                <div>
+                    <span class="text-3xl md:text-4xl font-heading font-semibold tracking-tight block">V3 InfraTech Limited</span>
+                    <p class="text-sm md:text-base font-heading font-medium text-slate-500 tracking-wide">Building the Digital Foundation of India</p>
+                </div>
+            </a>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-700">
+                <a href="#about" class="hover:text-slate-900 transition-colors">About</a>
+                <a href="#services" class="hover:text-slate-900 transition-colors">Services</a>
+                <a href="#promise" class="hover:text-slate-900 transition-colors">Our Promise</a>
+                <a href="#contact" class="hover:text-slate-900 transition-colors">Contact</a>
+            </nav>
+            <a href="#contact" class="bg-slate-900 hover:bg-slate-800 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-all shadow-lg shadow-slate-900/10">
+                Consult Our Infrastructure Experts
+            </a>
         </div>
-      </div>
-      <div class="card">
-        <img src="assets/images/b3a85a81-8b2a-4170-b3ef-220d2340fcad.jpeg" alt="Network Engineering" class="card-img">
-        <div class="card-body">
-          <h3>Network Engineering</h3>
-          <p>End-to-end LAN/WAN architecture, high-speed optical fiber deployment, enterprise routing, switching, and advanced network security.</p>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="about" class="relative py-24 md:py-32 border-b border-slate-800 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold uppercase tracking-widest">
+                    Infrastructure Solutions
+                </div>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-heading font-black text-white tracking-tight leading-tight">
+                    Building the Digital Foundation of India
+                </h1>
+                <p class="text-lg text-slate-300 leading-relaxed">
+                    V3 Infratech Limited is an end-to-end infrastructure solutions company specializing in Data Centers, Network Engineering, IT Systems, and 24x7 Technical Support. Designing, building, and managing core infrastructure for enterprises, cloud providers, and government organizations across India with an uncompromised focus on reliability, scalability, and security.
+                </p>
+                <div class="pt-4 flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="bg-blue-600 hover:bg-blue-500 text-white text-center font-semibold px-6 py-3.5 rounded-lg transition-all shadow-lg shadow-blue-600/25">
+                        Consult Our Infrastructure Experts
+                    </a>
+                    <a href="#services" class="border border-slate-700 hover:bg-slate-800 text-slate-300 text-center font-semibold px-6 py-3.5 rounded-lg transition-all">
+                        Explore Services
+                    </a>
+                </div>
+            </div>
+            
+            <div class="relative">
+                <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl blur-xl opacity-30"></div>
+                <div class="relative rounded-2xl bg-slate-800 border border-slate-700/80 p-3 shadow-2xl overflow-hidden">
+                    <img src="assets/images/future_ready_img1.webp" alt="High-density data center precision cooling system" class="rounded-xl w-full object-cover max-h-[420px]" />
+                    <div class="absolute top-4 right-4 bg-slate-950/80 backdrop-blur-sm rounded-full px-4 py-2 border border-slate-700/80">
+                        <span class="text-green-400 text-sm font-semibold tracking-wide uppercase">
+                            Future Ready Datacenter
+                        </span>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="card">
-        <img src="assets/images/future_ready_img1.webp" alt="IT Infrastructure" class="card-img">
-        <div class="card-body">
-          <h3>Infrastructure Setup</h3>
-          <p>Physical hardware deployments including server racks, structured cabling, UPS power protection systems, diesel generators, and DC infra.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white tracking-tight">Our Services</h2>
+                <p class="text-slate-400 mt-4">Enterprise-grade capabilities tailored to build, maintain, and protect mission-critical operations.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Data Center Solutions -->
+                <div class="bg-slate-800/60 border border-slate-700/60 rounded-xl p-8 hover:border-blue-500/50 transition-all duration-300 flex flex-col">
+                    <div class="w-full aspect-square mb-6 rounded-[28px] overflow-hidden bg-slate-900/20 flex items-center justify-center">
+                        <img src="assets/images/server-storage-infrastructure.jpg" alt="Server and storage infrastructure" class="w-full h-full object-cover" />
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Data Center Solutions</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed flex-grow">
+                        Complete design, build, power infrastructure, precision thermal cooling, and full-spectrum operations management engineered for enterprise availability.
+                    </p>
+                </div>
+
+                <!-- Network Engineering -->
+                <div class="bg-slate-800/60 border border-slate-700/60 rounded-xl p-8 hover:border-blue-500/50 transition-all duration-300 flex flex-col">
+                    <div class="w-full aspect-square mb-6 rounded-[28px] overflow-hidden bg-slate-900/20 flex items-center justify-center">
+                        <img src="assets/images/structured-cabling-it-networking-service.jpg" alt="Network engineering" class="w-full h-full object-cover" />
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Network Engineering</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed flex-grow">
+                        End-to-end LAN/WAN architecture, high-speed optical fiber deployment, enterprise routing, switching, and advanced network security.
+                    </p>
+                </div>
+
+                <!-- Infrastructure Setup -->
+                <div class="bg-slate-800/60 border border-slate-700/60 rounded-xl p-8 hover:border-blue-500/50 transition-all duration-300 flex flex-col">
+                    <div class="w-full aspect-square mb-6 rounded-[28px] overflow-hidden bg-slate-900/20 flex items-center justify-center">
+                        <img src="assets/images/future_ready_img1.webp" alt="Infrastructure setup" class="w-full h-full object-cover" />
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Infrastructure Setup</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed flex-grow">
+                        Physical hardware deployments including server racks, structured cabling, UPS power protection systems, diesel generators, and DC infra.
+                    </p>
+                </div>
+
+                <!-- Systems & Support -->
+                <div class="bg-slate-800/60 border border-slate-700/60 rounded-xl p-8 hover:border-blue-500/50 transition-all duration-300 flex flex-col">
+                    <div class="w-full aspect-square mb-6 rounded-[28px] overflow-hidden bg-slate-900/20 flex items-center justify-center">
+                        <img src="assets/images/systems-support.jpeg" alt="Systems and support" class="w-full h-full object-cover" />
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Systems & Support</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed flex-grow">
+                        Full server management, Annual Maintenance Contracts (AMC), 24x7 specialized helpdesk, and rapid response onsite technical support.
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="card">
-        <img src="assets/images/b3a85a81-8b2a-4170-b3ef-220d2340fcad.jpeg" alt="Systems and Support" class="card-img">
-        <div class="card-body">
-          <h3>Systems & Support</h3>
-          <p>Full server management, Annual Maintenance Contracts (AMC), 24x7 specialized helpdesk, and rapid response onsite technical support.</p>
+    </section>
+
+    <!-- Our Promise Section -->
+    <section id="promise" class="py-20 bg-gradient-to-r from-blue-900/30 via-slate-900 to-slate-900 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-xs font-semibold text-blue-400 uppercase tracking-widest mb-3">Our Commitment</p>
+            <h2 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight">
+                Engineered for Uptime. Backed by Support.
+            </h2>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="promise-banner">
-    <h2>Our Promise</h2>
-    <p>Engineered for Uptime. Backed by Support.</p>
-  </section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-24">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-8 md:p-12 shadow-2xl">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-white">Get in Touch</h2>
+                    <p class="text-slate-400 mt-2">Discuss your data center, networking, or infrastructure requirements with our team.</p>
+                </div>
 
-  <section class="contact" id="contact">
-    <h2>Get in Touch</h2>
-    <p style="color: var(--text-muted);">Discuss your data center, networking, or infrastructure requirements with our team.</p>
-    <form onsubmit="event.preventDefault(); alert('Thank you. Your request has been submitted to V3 Infratech.');">
-      <input type="text" placeholder="Your Full Name" required>
-      <input type="email" placeholder="Business Email Address" required>
-      <textarea rows="4" placeholder="Describe your infrastructure needs..." required></textarea>
-      <button type="submit">Submit Request</button>
-    </form>
-  </section>
+                <form class="space-y-6" onsubmit="event.preventDefault();">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-2">Name</label>
+                            <input type="text" placeholder="Your Full Name" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-2">Email</label>
+                            <input type="email" placeholder="name@company.com" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors" />
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-300 mb-2">Requirement Details</label>
+                        <textarea rows="4" placeholder="Briefly describe your requirements..." class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3.5 rounded-lg transition-all shadow-lg shadow-blue-600/20">
+                        Submit Request
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-  <footer>
-    <p>&copy; 2026 V3 Infratech Limited. All rights reserved.</p>
-  </footer>
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 py-8 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-6 text-center text-sm text-slate-500">
+            © 2026 V3 Infratech Limited. All rights reserved.
+        </div>
+    </footer>
 
-</body>
-</html>
-    @media(max-width:980px){.brand img{width:132px;height:56px}.hero-logo{right:-8px;top:-22px;width:150px;height:78px}.hero-grid{padding-top:64px}.links{display:none}.menu{display:block}.nav-cta{display:none}.hero-grid,.split,.sla,.contact-grid{grid-template-columns:1fr}.hero-grid{padding:65px 0}.visual{max-width:650px}.cards{grid-template-columns:repeat(2,1fr)}.process{grid-template-columns:repeat(2,1fr)}.trust .wrap{grid-template-columns:repeat(2,1fr);gap:18px}.trust-item:nth-child(2){border:0}.trust-item{padding-left:0}.cap{grid-template-columns:1fr}}
-    @media(max-width:620px){.wrap{width:min(var(--max),calc(100% - 28px))}.top{display:none}.nav{height:68px}.brand img{width:118px;height:50px}.hero-logo{display:none}.hero-grid{min-height:auto;padding:55px 0 70px;gap:45px}h1{font-size:43px}.hero p{font-size:16px}.rack{height:300px}.floating{left:12px;bottom:12px}.trust .wrap{grid-template-columns:1fr 1fr}.trust-item{border:0;padding:0}.cards,.process{grid-template-columns:1fr}.grid2{grid-template-columns:1fr;gap:0}section{padding:72px 0}.section-head{margin-bottom:35px}.contact-info h2{font-size:38px}.form{padding:22px}.foot{align-items:flex-start;flex-direction:column}.foot-links{flex-wrap:wrap}}
-  </style>
-</head>
-<body>
-  <div class="top"><div class="wrap"><a href="mailto:contact@v3infratech.com">contact@v3infratech.com</a><span>Enterprise IT Infrastructure & Managed Support</span></div></div>
-  <header><div class="wrap nav">
-    <a class="brand" href="#home" aria-label="V3 Infratech Limited home"><img src="assets/v3infratech.svg" alt="V3 Infratech Limited logo"><div class="brand-copy"><strong>V3 INFRATECH</strong><span>Limited</span></div></a>
-    <nav class="links" role="navigation" aria-label="Main navigation"><a href="#home">Home</a><a href="#about">About</a><a href="#services">Solutions</a><a href="#industries">Industries</a><a href="#capabilities">Capabilities</a><a href="#contact">AMC / Support</a><a href="#contact">Contact</a></nav>
-    <a class="nav-cta" href="#contact">Talk to an Expert</a><button class="menu" aria-label="Open navigation" aria-expanded="false">☰</button>
-  </div></header>
-
-  <main>
-    <section id="home" class="hero"><div class="wrap hero-grid">
-      <div>
-        <span class="eyebrow"><i class="dot"></i> Infrastructure engineered around uptime</span>
-        <h1>Building the Infrastructure Behind Connected Business</h1>
-        <p>V3 Infratech delivers enterprise IT infrastructure, networking, data‑centre, physical infrastructure and managed support solutions for mission‑critical environments.</p>
-        <div class="actions"><a class="btn primary" href="#contact">Talk to an Expert</a><a class="btn ghost" href="#services">Explore Solutions</a></div>
-      </div>
-      <div class="visual"><div class="hero-logo"><img src="assets/v3infratech.svg" alt="V3 Infratech Limited"></div><div class="panel"><div class="rack"><div class="status">SYSTEM STATUS<b>Operational</b></div><div class="servers">
-        <div class="server"><i class="led"></i><small>Core Network</small><div class="portline"><i></i><i></i><i></i><i></i></div></div>
-        <div class="server"><i class="led"></i><small>Server Infrastructure</small><div class="portline"><i></i><i></i><i></i><i></i></div></div>
-        <div class="server"><i class="led"></i><small>Storage / Systems</small><div class="portline"><i></i><i></i><i></i><i></i></div></div>
-        <div class="server"><i class="led"></i><small>Managed Support</small><div class="portline"><i></i><i></i><i></i><i></i></div></div>
-      </div></div></div><div class="floating"><small>Delivery model</small><strong>Turnkey + Managed</strong></div></div>
-    </div></section>
-
-    <div class="trust"><div class="wrap"><div class="trust-item"><b>24×7</b><span>Technical support</span></div><div class="trust-item"><b>Turnkey</b><span>Infrastructure execution</span></div><div class="trust-item"><b>Pan-India</b><span>Service delivery</span></div><div class="trust-item"><b>Enterprise</b><span>Mission-critical focus</span></div></div></div>
-
-    <section id="about"><div class="wrap split"><div><span class="kicker">About V3 Infratech</span><p class="lead" style="margin-top:14px">A technical infrastructure partner for organizations that cannot afford weak foundations.</p></div><div><p class="body">V3 Infratech Limited specializes in deploying robust, enterprise-grade digital backbones. The scope spans high-density server environments, copper and fiber structured cabling, network infrastructure, physical infrastructure and ongoing maintenance support.</p><div class="checklist"><div class="check"><div class="check-mark">✓</div><div><b>Infrastructure-first thinking</b><span>Plan the physical, network and systems layers together instead of treating them as isolated projects.</span></div></div><div class="check"><div class="check-mark">✓</div><div><b>Execution with operational continuity in mind</b><span>Design and delivery are framed around availability, maintainability and practical field support.</span></div></div><div class="check"><div class="check-mark">✓</div><div><b>Support beyond installation</b><span>AMC and managed support extend the relationship from deployment into day-to-day operations.</span></div></div></div></div></div></section>
-
-    <section id="services" class="services"><div class="wrap"><div class="section-head"><span class="kicker">Core services</span><h2>One partner across the infrastructure stack.</h2><p>From the room that houses the equipment to the network that connects it and the engineers who keep it running.</p></div><div class="cards">
-      <article class="card"><div class="icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.6" d="M4 5.5h16v5H4zm0 8h16v5H4z"/></svg></div><h3>Data Center Infrastructure</h3><p>Facility lifecycle engineering: rack layouts, cooling, power distribution and DCIM-ready deployment.</p><a href="#contact">Explore →</a></article>
-      <article class="card"><div class="icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.6" d="M3 12h18M6 5v14M18 5v14"/></svg></div><h3>Network Infrastructure</h3><p>Design and implementation of LAN/WAN, routing, switching, and resilient network topologies.</p><a href="#contact">Explore →</a></article>
-      <article class="card"><div class="icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.6" d="M4 6h16v12H4zM8 10h8"/></svg></div><h3>Structured Cabling & Fiber</h3><p>End-to-end fiber and copper structured cabling with testing, certification and pathway management.</p><a href="#contact">Explore →</a></article>
-      <article class="card"><div class="icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.6" d="M12 3v4m0 10v4M3 12h4m10 0h4"/></svg></div><h3>Server & Storage Infrastructure</h3><p>Server rack design, storage architecture, virtualization and chassis-level planning for scale.</p><a href="#contact">Explore →</a></article>
-      <article class="card"><div class="icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.6" d="M6 2v6M18 2v6M4 14h16v6H4z"/></svg></div><h3>Power & UPS Infrastructure</h3><p>UPS selection, PDU design, backup power integration and distribution for resilient operations.</p><a href="#contact">Explore →</a></article>
-      <article class="card"><div class="icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.6" d="M12 2l3 6h6l-5 4 2 6-6-3-6 3 2-6-5-4h6z"/></svg></div><h3>Security & Surveillance</h3><p>IP security systems, CCTV, access control and integration with IT operations for secure facilities.</p><a href="#contact">Explore →</a></article>
-      <article class="card"><div class="icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.6" d="M12 3v4M12 17v4M3 12h4M17 12h4"/></svg></div><h3>Systems Administration</h3><p>Server, storage and infrastructure administration, monitoring, patching and configuration management.</p><a href="#contact">Explore →</a></article>
-      <article class="card"><div class="icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.6" d="M4 6h16v12H4zM8 10h8M8 14h5"/></svg></div><h3>AMC & Managed Support</h3><p>Preventive and corrective maintenance, remote support, field engineer response and SLA-based AMCs.</p><a href="#contact">Explore →</a></article>
-    </div></div></section>
-
-    <section id="industries"><div class="wrap"><div class="section-head"><span class="kicker">Industries</span><h2>We work across critical sectors.</h2><p>Engineering and infrastructure delivery tailored for organisations in regulated and high‑availability environments.</p></div>
-      <div class="cards" style="grid-template-columns:repeat(4,1fr);gap:14px">
-        <article class="card"><h3>Government</h3><p>Secure infrastructure deployments with adherence to compliance and on-site delivery capability.</p></article>
-        <article class="card"><h3>Data Centres</h3><p>High-density design and operations for colocation and hyperscale environments.</p></article>
-        <article class="card"><h3>BFSI</h3><p>Banking and financial systems with strict continuity and monitoring requirements.</p></article>
-        <article class="card"><h3>Manufacturing</h3><p>Industrial network design and resilient IT infrastructure for production environments.</p></article>
-        <article class="card"><h3>Healthcare</h3><p>Compliant infrastructure for healthcare IT, secure networks and critical systems.</p></article>
-        <article class="card"><h3>Education</h3><p>Campus networking, data centres and managed support for academic institutions.</p></article>
-        <article class="card"><h3>Corporate</h3><p>Enterprise office infrastructure, secure connectivity and managed services.</p></article>
-        <article class="card"><h3>Cloud & MSP</h3><p>Infrastructure integration and connectivity for cloud and managed service providers.</p></article>
-      </div>
-    </div></section>
-
-    <section id="capabilities"><div class="wrap"><div class="section-head"><span class="kicker">Technical capabilities</span><h2>Designed to work as one system.</h2><p>Infrastructure projects fail when individual layers are optimized in isolation. V3's service model connects the pieces.</p></div><div class="cap">
-      <article class="cap-card"><h3>Compute & Data Center Environment</h3><p>Plan and deploy the physical environment around servers and critical systems, with attention to power, cooling, rack density and operational access.</p><div class="tags"><span class="tag">Server racks</span><span class="tag">PAC / cooling</span><span class="tag">Power distribution</span><span class="tag">DCIM</span></div></article>
-      <article class="cap-card"><h3>Connectivity & Structured Cabling</h3><p>Build the wired foundation that connects users, systems and facilities, from fiber backbone routes through structured copper deployment.</p><div class="tags"><span class="tag">Fiber optics</span><span class="tag">Cat6 / Cat6A</span><span class="tag">LAN / WAN</span><span class="tag">Routing & switching</span></div></article>
-      <article class="cap-card"><h3>Power, Security & Physical Resilience</h3><p>Support the infrastructure around IT equipment so the technology is not exposed to avoidable physical or power-related disruption.</p><div class="tags"><span class="tag">UPS</span><span class="tag">Backup power</span><span class="tag">Fire suppression</span><span class="tag">IP security</span></div></article>
-      <article class="cap-card"><h3>Operations & Field Support</h3><p>Extend project delivery into operational support through maintenance contracts, technical assistance, monitoring and field response.</p><div class="tags"><span class="tag">AMC</span><span class="tag">Helpdesk</span><span class="tag">Field engineers</span><span class="tag">Managed support</span></div></article>
-    </div></div></section>
-
-    <section class="dark"><div class="wrap sla"><div><span class="kicker">Service promise</span><p class="quote">“Engineered for <span>uptime.</span><br>Backed by support.”</p><p class="body" style="color:#91a3b8;max-width:620px;margin-top:20px">A strong infrastructure partner is not just the company that installs equipment. It is the team you can call when the environment is under pressure.</p></div><div class="sla-box"><div class="row"><span>Technical support</span><b>24×7</b></div><div class="row"><span>Execution model</span><b>Turnkey</b></div><div class="row"><span>Service coverage</span><b>Pan-India</b></div><div class="row"><span>Support model</span><b>AMC + Field</b></div></div></div></section>
-
-    <section id="approach"><div class="wrap"><div class="section-head"><span class="kicker">How we work</span><h2>From requirement to operational handover.</h2><p>A clear delivery path reduces the gaps that typically appear between design, installation and support.</p></div>
-      <div class="process">
-        <div class="step"><span class="step-num">01 Assess</span><h3>Assess</h3><p>Site survey, requirements capture and risk assessment to define scope and constraints.</p></div>
-        <div class="step"><span class="step-num">02 Design</span><h3>Design</h3><p>Technical architecture, schematics and detailed execution plans for infrastructure and systems.</p></div>
-        <div class="step"><span class="step-num">03 Deploy</span><h3>Deploy</h3><p>On-site installation, cabling, rack works, power and cooling fit-out with QA and testing.</p></div>
-        <div class="step"><span class="step-num">04 Integrate</span><h3>Integrate</h3><p>System integration, network commissioning and validation across components and services.</p></div>
-        <div class="step"><span class="step-num">05 Commission</span><h3>Commission</h3><p>Operational handover, documentation, monitoring setup and final acceptance testing.</p></div>
-        <div class="step"><span class="step-num">06 Support</span><h3>Support</h3><p>AMC, field response and managed support to maintain availability and operational health.</p></div>
-      </div>
-    </div></section>
-
-    <section id="contact" class="contact"><div class="wrap contact-grid"><div class="contact-info"><span class="kicker">Contact</span><h2>Let's engineer your next infrastructure project.</h2><p>Share the requirement, the existing environment or even just the problem you are trying to solve. The engineering team can start from there.</p><div class="details"><div class="detail"><div class="icon">✉</div><div><b>Email</b><span>contact@v3infratech.com</span></div></div><div class="detail"><div class="icon">⌖</div><div><b>Corporate location</b><span>V3 Infratech Limited, Tech Corridor, Bengaluru, India</span></div></div></div></div>
-      <div class="form"><h3>Request a consultation</h3><form id="contactForm"><div class="grid2"><div class="field"><label>Full name</label><input name="name" required placeholder="Your name"></div><div class="field"><label>Company</label><input name="company" required placeholder="Company / organisation"></div></div><div class="grid2"><div class="field"><label>Business email</label><input type="email" name="email" required placeholder="name@organization.com"></div><div class="field"><label>Phone</label><input type="tel" name="phone" placeholder="+91 98xxxxxxxx"></div></div>
-        <div class="field"><label>Service required</label><select name="service"><option>Data Center</option><option>Network Engineering</option><option>Physical Infrastructure</option><option>Structured Cabling & Fiber</option><option>Server & Storage</option><option>Power & UPS</option><option>Security & Surveillance</option><option>AMC & Managed Support</option><option>Other</option></select></div>
-        <div class="field"><label>Project brief</label><textarea name="message" required placeholder="Tell us what you need, what exists today, and what outcome you want."></textarea></div>
-        <button class="btn primary" type="submit">Request a Consultation</button><p class="note">This form opens your email client. Connect it to a form provider before production.</p></form></div>
-    </div></section>
-  </main>
-
-  <footer><div class="wrap foot"><div class="footer-brand"><img src="assets/v3infratech.svg" alt="V3 Infratech Limited logo"><div>© 2026 <strong>V3 Infratech Limited</strong>. All rights reserved.</div></div><div class="foot-links"><a href="#about">About</a><a href="#services">Services</a><a href="#contact">Contact</a></div></div></footer>
-  <script>
-    const form=document.getElementById('contactForm');
-    form.addEventListener('submit',e=>{e.preventDefault();const d=new FormData(form);const subject=encodeURIComponent('Infrastructure inquiry — '+d.get('org'));const body=encodeURIComponent(`Name: ${d.get('name')}\nOrganization: ${d.get('org')}\nEmail: ${d.get('email')}\nService: ${d.get('service')}\n\nProject brief:\n${d.get('message')}`);window.location.href=`mailto:contact@v3infratech.com?subject=${subject}&body=${body}`;});
-  </script>
 </body>
 </html>
