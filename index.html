@@ -36,7 +36,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.5rem 6%;
+            padding: 1.25rem 6%;
             border-bottom: 1px solid var(--border-color);
             position: sticky;
             top: 0;
@@ -53,16 +53,41 @@
             color: var(--text-main);
         }
 
-        /* Pure SVG Exact Logo Representation */
-        .logo-svg {
-            height: 32px;
-            width: auto;
+        /* Clean Swiss-style typography badge representing the exact brand lockup */
+        .logo-mark {
+            display: flex;
+            align-items: baseline;
+            gap: 2px;
+            font-weight: 800;
+            font-size: 1.25rem;
+            letter-spacing: -0.5px;
+            color: var(--text-main);
         }
 
-        .brand-name {
-            font-size: 1.1rem;
+        .logo-mark span {
+            color: var(--accent);
+        }
+
+        .brand-name-group {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
+        .brand-title {
+            font-size: 1rem;
             font-weight: 700;
             letter-spacing: -0.3px;
+            color: var(--text-main);
+        }
+
+        .brand-subtitle {
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-muted);
+            margin-top: 2px;
+            font-weight: 600;
         }
 
         nav {
@@ -103,18 +128,18 @@
 
         /* 2. Clean Hero */
         .hero {
-            padding: 8rem 6% 6rem;
+            padding: 7rem 6% 6rem;
             max-width: 1200px;
             margin: 0 auto;
             border-bottom: 1px solid var(--border-color);
             display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
+            grid-template-columns: 1.1fr 0.9fr;
             gap: 4rem;
             align-items: center;
         }
 
         .hero-content h1 {
-            font-size: 3.8rem;
+            font-size: 3.6rem;
             line-height: 1.1;
             font-weight: 700;
             letter-spacing: -1.5px;
@@ -146,12 +171,13 @@
             opacity: 0.9;
         }
 
-        /* Real photo representing strict technical deployment as requested */
+        /* Minimalist technical asset display frame */
         .hero-visual {
             width: 100%;
             border-radius: 6px;
             overflow: hidden;
             border: 1px solid var(--border-color);
+            background: #f8fafc;
         }
 
         .hero-visual img {
@@ -159,7 +185,7 @@
             height: 380px;
             object-fit: cover;
             display: block;
-            filter: grayscale(20%);
+            mix-blend-mode: multiply;
         }
 
         /* 3. Clean Grid (3-Column Minimalist Services) */
@@ -202,8 +228,8 @@
         }
 
         .service-icon {
-            width: 36px;
-            height: 36px;
+            width: 32px;
+            height: 32px;
             margin-bottom: 1.5rem;
             stroke: var(--accent);
             stroke-width: 1.5;
@@ -294,7 +320,6 @@
             flex-direction: column;
         }
 
-        /* Plain text input underline fields instead of heavy boxed input borders */
         .minimal-input {
             border: none;
             border-bottom: 1px solid var(--border-color);
@@ -378,12 +403,11 @@
     <!-- 1. Minimal Sticky Header -->
     <header>
         <a href="#" class="brand-logo">
-            <svg class="logo-svg" viewBox="0 0 240 180" xmlns="http://www.w3.org/2000/svg">
-                <path d="M 15,35 L 75,160 L 105,160 L 140,80 L 115,80 L 90,135 L 40,35 Z" fill="#0042ec" />
-                <path d="M 88,102 L 105,160 L 140,80 L 115,80 L 98,122 Z" fill="#0c1836" />
-                <path d="M 140,40 C 175,32 215,48 215,75 C 215,92 198,102 182,105 C 205,108 220,125 220,148 C 220,180 170,190 135,178 L 142,156 C 168,165 200,158 200,142 C 200,126 172,122 150,122 L 150,103 C 170,103 195,98 195,80 C 195,67 170,58 145,64 Z" fill="#2b6bfb" />
-            </svg>
-            <span class="brand-name">V3 Infratech</span>
+            <div class="logo-mark">V<span>3</span></div>
+            <div class="brand-name-group">
+                <span class="brand-title">Infratech</span>
+                <span class="brand-subtitle">Limited</span>
+            </div>
         </a>
         <nav>
             <a href="#services">services</a>
@@ -401,8 +425,8 @@
             <a href="#contact" class="solid-cta">Schedule Consultation</a>
         </div>
         <div class="hero-visual">
-            <!-- High-end architectural data center execution visual -->
-            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=85" alt="V3 Infratech Data Center Hall">
+            <!-- Clean, professional enterprise server network visual -->
+            <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=85" alt="V3 Infratech Infrastructure Operations">
         </div>
     </section>
 
